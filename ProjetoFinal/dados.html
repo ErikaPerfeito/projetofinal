@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Os Dados - Spotify</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="logo">Spotify App</div>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="logica.html">Lógica</a>
+    <a href="dados.html">Dados</a>
+    <a href="visual.html">Visual</a>
+    <a href="impacto.html">Impacto</a>
+    <a href="sobre.html">Sobre Nós</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Banco de Dados</h2>
+  <p>Como as informações dos usuários são organizadas.</p>
+</section>
+
+<section class="conteudo">
+  <h2 style="color:#1DB954;">Estrutura dos Dados</h2>
+  <p>
+    O banco de dados armazena informações essenciais como usuários, músicas, artistas, playlists, curtidas e histórico
+    de reprodução. Cada usuário possui um identificador único que se relaciona com suas preferências musicais.
+  </p>
+  <p>
+    Com esses dados bem organizados, o sistema consegue buscar rapidamente informações para gerar recomendações,
+    playlists automáticas e estatísticas personalizadas para cada perfil de usuário.
+  </p>
+</section>
+
+<P>
+<section class="conteudo">
+  <h2 style="color:#1DB954;">Modelo do Banco de Dados</h2>
+
+  <p><strong>Tabela Usuários:</strong> armazena os dados dos usuários como id, nome, e-mail e senha.</p>
+  <p><strong>Tabela Músicas:</strong> guarda as informações das músicas como id, nome, artista e gênero.</p>
+  <p><strong>Tabela Playlists:</strong> armazena as playlists criadas pelo usuário.</p>
+  
+  <p>
+    Essas tabelas se relacionam entre si por meio de chaves estrangeiras, permitindo que o sistema
+    saiba quais músicas cada usuário ouve, curte e recebe como recomendação.
+  </p>
+
+  <h3 style="margin-top:30px; color:#1DB954;">Relacionamentos</h3>
+  <p>Um usuário pode criar várias playlists.</p>
+  <p>Uma playlist pode conter várias músicas.</p>
+  <p>As músicas podem aparecer em várias playlists diferentes.</p>
+
+  <p style="margin-top:20px;">
+    Essas três tabelas são suficientes para o funcionamento da playlist algorítmica, pois o sistema
+    precisa saber quem é o usuário, quais músicas existem e quais playlists estão sendo geradas
+    automaticamente.
+  </p>
+
+  
+   <div class="imagem-banco">
+  <img src="img/diagrama.png" alt="Diagrama do Banco de Dados" id="imgBanco">
+  <span class="legenda-imagem">Modelo Conceitual do Banco de Dados</span>
+</div>
+
+
+<div id="modalImagem" class="modal">
+  <span class="fechar" id="btnFechar">&times;</span>
+  <img class="modal-conteudo" id="imgModal">
+</div>
+
+</section>
+</P>
+
+<script>
+  const img = document.getElementById("imgBanco");
+  const modal = document.getElementById("modalImagem");
+  const imgModal = document.getElementById("imgModal");
+  const btnFechar = document.getElementById("btnFechar");
+
+  img.onclick = function() {
+    modal.style.display = "block";
+    imgModal.src = this.src;
+  }
+
+  btnFechar.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  modal.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
+</body>
+
+</body>
+</html>

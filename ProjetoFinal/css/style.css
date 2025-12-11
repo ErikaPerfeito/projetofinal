@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #000;
+}
+
+.logo {
+  color: #1DB954;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #1DB954;
+}
+
+.hero {
+  text-align: center;   
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #1DB954 0%, #0d0d0d 60%);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.conteudo {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.conteudo h2 {
+  text-align: center;  
+}
+
+.conteudo p {
+  text-align: justify;  
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 700px) {
+  .topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+ /* Imagem banco */
+.imagem-banco {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.imagem-banco img {
+  width: 700px;
+  max-width: 100%;
+  border-radius: 14px;
+  border: 3px solid #1DB954;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.imagem-banco img:hover {
+  transform: scale(1.05);
+}
+
+.legenda-imagem {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* BOTÃO FECHAR */
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* imagem fluxo */
+.img-container {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.img-container img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 850px;
+  border-radius: 10px;
+}
+
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 600px) {
+  .img-container img {
+    width: 90%;
+  }
+
+  .modal-conteudo {
+    width: 95%;
+  }
+
+  .fechar {
+    font-size: 32px;
+    right: 20px;
+  }
+}
+
+/*visual*/
+/* Contêiner das imagens */
+.img-container {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.img-container img {
+  width: 100%;
+  max-width: 600px;     /* ⬅ deixa igual ao diagrama */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+.legenda {
+   margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Logotipo */
+.img-container img[alt="Logotipo da agência"] {
+  max-width: 350px;  
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#fechar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/*sobre nos*/
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #000;
+}
+
+.logo {
+  color: #1DB954;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #1DB954;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #1DB954 0%, #0d0d0d 60%);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* CONTEÚDO COMUM */
+.conteudo {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.conteudo h2 {
+  text-align: center;
+}
+
+.conteudo p {
+  text-align: justify;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* ============================== */
+/* SEÇÃO INVESTIGADORES           */
+/* ============================== */
+
+/* ============================== */
+/* SEÇÃO SOBRE NÓS (ANTES: investigadores) */
+/* ============================== */
+
+.sobrenos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobrenos h2 {
+  color: #1DB954;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards-sobrenos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card-sobrenos {
+  background: #111;
+  padding: 25px;
+  width: 260px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  transition: 0.3s;
+}
+
+.card-sobrenos:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #1DB954;
+}
+
+.card-sobrenos img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #1DB954;
+}
+
+.card-sobrenos h3 {
+  margin-bottom: 8px;
+  color: #1DB954;
+}
+
+.card-sobrenos p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.card-sobrenos a {
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-sobrenos a:hover {
+  text-decoration: underline;
+}
+
+.card-sobrenos {
+  background: #111;
+  padding: 25px;
+  width: 260px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  transition: 0.3s;
+
+  /* ADICIONE */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-sobrenos p {
+  margin-bottom: 20px;
+  color: #ddd;
+
+  /* evita que texto estique pra fora do card e empurre o link */
+  word-break: break-word;
+}
+.card-sobrenos a {
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+
+  /* garante que o link fique dentro do card e ocupe só o espaço necessário */
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 6px;
+  word-break: break-word;
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+  .topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .cards-sobrenos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.video-demo {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.video-demo h2 {
+    margin-bottom: 20px;
+}
+
+.video-demo video {
+    width: 100%;
+    max-width: 800px;  /* limite do tamanho */
+    border-radius: 12px;
+    outline: none;
+    border: 3px solid #1DB954; /* opcional */
+    box-shadow: 0 0 15px #000;
+}
+
+.spotify-duas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.spotify-card {
+    width: 480px;
+    text-align: center;
+}
+
+.legenda-playlist {
+    margin-top: 8px;
+    color: #ccc;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Responsivo — no celular fica um embaixo do outro */
+@media (max-width: 900px) {
+    .spotify-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+
+
+
+
+

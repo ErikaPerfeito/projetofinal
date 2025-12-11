@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>A Lógica - Spotify</title>
+ <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="logo">Spotify App</div>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="logica.html">Lógica</a>
+    <a href="dados.html">Dados</a>
+    <a href="visual.html">Visual</a>
+    <a href="impacto.html">Impacto</a>
+    <a href="sobre.html">Sobre Nós</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>A Lógica do Sistema</h2>
+  <p>Como o algoritmo entende seus gostos musicais.</p>
+</section>
+
+<section class="conteudo">
+  <h2 style="color:#1DB954;">Funcionamento do Algoritmo</h2>
+  <p>
+    O sistema de recomendação do Spotify funciona a partir da coleta de dados de comportamento do usuário. Cada ação,
+    como ouvir uma música, curtir, pular faixas ou adicionar a uma playlist, é registrada. Esses dados são analisados
+    por algoritmos que identificam padrões de gosto musical.
+  </p>
+  <p>
+    A partir desses padrões, o sistema compara o perfil do usuário com milhões de outros usuários semelhantes,
+    permitindo sugerir músicas novas de forma personalizada. O algoritmo é atualizado constantemente, garantindo que
+    as recomendações evoluam junto com o gosto musical do usuário.
+  </p>
+
+  <section class="conteudo">
+  <h2 style="color:#1DB954;">Fluxograma de Decisão do Algoritmo</h2>
+  <div class="img-container">
+  <img src="img/fluxograma.png" class="img-click" alt="Fluxograma do Algoritmo Spotify">
+  
+</div>
+
+<div id="modal-img" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="img-ampliada">
+</div>
+
+  <h3 style="color:#1DB954; margin-top:30px;">Explicação da Lógica</h3>
+
+  <p>
+    O sistema analisa o comportamento do usuário no aplicativo, observando as músicas mais ouvidas
+    e as curtidas. A partir disso, ele faz perguntas internas, como se o usuário escuta mais um tipo
+    de música ou se anda curtindo várias faixas. Com base nessas respostas, o algoritmo
+    decide se vai recomendar músicas parecidas com as já ouvidas ou se vai variar os estilos.
+    Depois dessa análise, o sistema monta automaticamente uma playlist personalizada e mostra para
+    o usuário.
+  </p>
+</section>
+
+
+</section>
+
+<script>
+  const modal = document.getElementById("modal-img");
+  const img = document.querySelector(".img-click");
+  const modalImg = document.getElementById("img-ampliada");
+  const fechar = document.querySelector(".fechar");
+
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  fechar.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+</body>
+</html>
